@@ -1,0 +1,6 @@
+ticker,name,currency,region,kind,notes
+ACWI,iShares MSCI ACWI ETF,USD,Global,total_return_proxy,Adjusted close reinveste dividendos (proxy de retorno total); inicio 2008-03; proxy investivel do MSCI ACWI TR
+SPY,SPDR S&P 500 ETF Trust,USD,United States,total_return_proxy,Adjusted close reinveste dividendos; proxy investivel do S&P 500 Total Return
+EFA,iShares MSCI EAFE ETF,USD,Developed ex-US,total_return_proxy,Proxy de mercados desenvolvidos ex-EUA
+EEM,iShares MSCI Emerging Markets ETF,USD,Emerging Markets,total_return_proxy,Proxy de mercados emergentes
+^BVSP,Ibovespa,BRL,Brazil,total_return_index,O Ibovespa e um indice de retorno total em BRL (reinveste proventos); convertido para USD na comparacao

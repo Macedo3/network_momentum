@@ -1,0 +1,83 @@
+[data]
+universe_path = "universe.csv"
+cache_dir = "../data/cache"
+start = "2005-01-01"
+end = ""
+auto_adjust = true
+repair = true
+# Evita contenção no cache SQLite interno do yfinance no Windows.
+threads = false
+min_tickers = 12
+download_fields = ["Close", "Open", "High", "Low", "Volume"]
+base_currency = "USD"
+fx_map_path = "fx.csv"
+benchmarks_path = "benchmarks.csv"
+max_abs_daily_return = 0.60
+max_stale_run_days = 10
+
+[features]
+volatility_span = 60
+volatility_min_periods = 20
+return_lookbacks = [1, 21, 63, 126, 252]
+macd_scales = [[8, 24], [16, 48], [32, 96]]
+macd_price_std_window = 63
+macd_norm_std_window = 252
+winsor_halflife = 252
+winsor_limit = 5.0
+# Conservador para bolsas em fusos diferentes. Use 0 para a convenção exata do paper.
+signal_lag_days = 1
+max_stale_days = 5
+
+[graph]
+# Perfil prático: três horizontes e atualização mensal (o perfil fiel ao paper
+# está em paper_structure.toml: cinco horizontes e atualização diária).
+lookbacks = [252, 504, 756]
+# Grade real de seleção; a grade integral do artigo é
+# [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10.0] (11x11)
+# e é computacionalmente proibitiva aqui.
+alpha_grid = [0.05, 0.1, 0.5]
+beta_grid = [0.05, 0.1, 0.5]
+rebalance_every = 21
+min_assets = 12
+maxiter = 300
+tolerance = 1e-7
+solver = "lbfgs"          # "cvxpy" ativa a verificação com solver convexo exato
+edge_threshold = 1e-4      # fração do maior peso; usado nas métricas de topologia
+per_lookback_eligibility = true
+
+[model]
+initial_train_years = 10
+test_years = 5
+validation_fraction = 0.10
+embargo_days = 1
+target_annual_volatility = 0.15
+transaction_cost_bps = 1.0
+portfolio_volatility_scaling = true
+portfolio_volatility_span = 60
+max_portfolio_leverage = 5.0
+train_regions = []
+test_regions = []
+min_regression_samples = 250
+regression_method = "ols"   # principal e interpretável; ridge/lasso/elastic_net são robustez
+ridge_lambda = 1e-4
+lasso_lambda = 1e-5
+elastic_net_l1_ratio = 0.5
+signal_threshold = 0.0
+
+[costs]
+path = "costs.csv"
+scenario = "base"           # conservative | base | optimistic
+portfolio_notional_usd = 10000000.0
+max_participation = 0.05
+impact_coefficient = 1.0
+pseudo_cost_sweep_bps = [0.0, 0.5, 1.0, 2.0, 3.0, 4.0, 5.0, 10.0]
+
+[validation]
+seed = 42
+bootstrap_samples = 2000
+bootstrap_block_days = 21
+permutation_samples = 500
+cscv_blocks = 8
+
+[output]
+directory = "../outputs/latest"

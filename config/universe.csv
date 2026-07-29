@@ -1,0 +1,37 @@
+ticker,name,region,country,exchange,currency,sector,short_eligible,borrow_fee_annual_bps_estimate,data_source,note
+AAPL,Apple,United States,United States,Nasdaq,USD,Information Technology,true,25,yfinance,
+MSFT,Microsoft,United States,United States,Nasdaq,USD,Information Technology,true,25,yfinance,
+JPM,JPMorgan Chase,United States,United States,NYSE,USD,Financials,true,25,yfinance,
+XOM,Exxon Mobil,United States,United States,NYSE,USD,Energy,true,25,yfinance,
+PETR4.SA,Petrobras PN,Brazil,Brazil,B3,BRL,Energy,true,150,yfinance,
+VALE3.SA,Vale ON,Brazil,Brazil,B3,BRL,Materials,true,150,yfinance,
+ITUB4.SA,Itaú Unibanco PN,Brazil,Brazil,B3,BRL,Financials,true,150,yfinance,
+BBAS3.SA,Banco do Brasil ON,Brazil,Brazil,B3,BRL,Financials,true,150,yfinance,
+AZN.L,AstraZeneca,United Kingdom,United Kingdom,LSE,GBP,Health Care,true,30,yfinance,LSE cota em pence (GBp); irrelevante para retornos
+HSBA.L,HSBC Holdings,United Kingdom,United Kingdom,LSE,GBP,Financials,true,30,yfinance,dual listing com 0005.HK
+BP.L,BP,United Kingdom,United Kingdom,LSE,GBP,Energy,true,30,yfinance,LSE cota em pence (GBp)
+ULVR.L,Unilever,United Kingdom,United Kingdom,LSE,GBP,Consumer Staples,true,30,yfinance,LSE cota em pence (GBp)
+SAP.DE,SAP,Eurozone,Germany,Xetra,EUR,Information Technology,true,30,yfinance,
+SIE.DE,Siemens,Eurozone,Germany,Xetra,EUR,Industrials,true,30,yfinance,
+MC.PA,LVMH,Eurozone,France,Euronext Paris,EUR,Consumer Discretionary,true,30,yfinance,sujeita à FTT francesa na compra
+TTE.PA,TotalEnergies,Eurozone,France,Euronext Paris,EUR,Energy,true,30,yfinance,sujeita à FTT francesa na compra
+7203.T,Toyota Motor,Japan,Japan,TSE,JPY,Consumer Discretionary,true,40,yfinance,
+6758.T,Sony Group,Japan,Japan,TSE,JPY,Information Technology,true,40,yfinance,
+8306.T,Mitsubishi UFJ Financial,Japan,Japan,TSE,JPY,Financials,true,40,yfinance,
+9432.T,Nippon Telegraph and Telephone,Japan,Japan,TSE,JPY,Communication Services,true,40,yfinance,
+0700.HK,Tencent,Hong Kong,Hong Kong,HKEX,HKD,Communication Services,true,75,yfinance,
+0005.HK,HSBC Holdings Hong Kong,Hong Kong,Hong Kong,HKEX,HKD,Financials,true,75,yfinance,dual listing com HSBA.L — ver ablação de dedução
+0941.HK,China Mobile,Hong Kong,Hong Kong,HKEX,HKD,Communication Services,true,75,yfinance,
+0388.HK,Hong Kong Exchanges and Clearing,Hong Kong,Hong Kong,HKEX,HKD,Financials,true,75,yfinance,
+RELIANCE.NS,Reliance Industries,India,India,NSE,INR,Energy,true,200,yfinance,short via SLB indiano é restrito para estrangeiros
+INFY.NS,Infosys,India,India,NSE,INR,Information Technology,true,200,yfinance,short via SLB indiano é restrito para estrangeiros
+HDFCBANK.NS,HDFC Bank,India,India,NSE,INR,Financials,true,200,yfinance,short via SLB indiano é restrito para estrangeiros
+ICICIBANK.NS,ICICI Bank,India,India,NSE,INR,Financials,true,200,yfinance,short via SLB indiano é restrito para estrangeiros
+BHP.AX,BHP Group,Australia,Australia,ASX,AUD,Materials,true,30,yfinance,
+CBA.AX,Commonwealth Bank,Australia,Australia,ASX,AUD,Financials,true,30,yfinance,
+WBC.AX,Westpac Banking,Australia,Australia,ASX,AUD,Financials,true,30,yfinance,
+TLS.AX,Telstra Group,Australia,Australia,ASX,AUD,Communication Services,true,30,yfinance,
+RY.TO,Royal Bank of Canada,Canada,Canada,TSX,CAD,Financials,true,30,yfinance,
+TD.TO,Toronto-Dominion Bank,Canada,Canada,TSX,CAD,Financials,true,30,yfinance,
+ENB.TO,Enbridge,Canada,Canada,TSX,CAD,Energy,true,30,yfinance,
+SU.TO,Suncor Energy,Canada,Canada,TSX,CAD,Energy,true,30,yfinance,

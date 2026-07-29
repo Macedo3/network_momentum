@@ -1,0 +1,10 @@
+currency,pair_ticker,invert,notes
+USD,,false,moeda-base
+BRL,USDBRL=X,true,par cotado em BRL por USD
+GBP,GBPUSD=X,false,LSE cota acoes em pence (GBp); conversao feita em retornos elimina o fator 100
+EUR,EURUSD=X,false,
+JPY,USDJPY=X,true,
+HKD,USDHKD=X,true,HKD tem banda cambial com USD (peg 7.75-7.85)
+INR,USDINR=X,true,
+AUD,AUDUSD=X,false,
+CAD,USDCAD=X,true,
